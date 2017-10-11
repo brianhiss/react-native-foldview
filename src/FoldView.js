@@ -1,17 +1,12 @@
-import React, {
-  Component,
-  PropTypes,
-} from 'react';
-
+import React, { Component} from 'react';
 import {
   View,
   Animated,
   StyleSheet,
   Platform,
 } from 'react-native';
-
+import PropTypes from 'prop-types';
 import invariant from 'invariant';
-
 import transformUtil from './transformUtil';
 
 const styles = StyleSheet.create({
@@ -431,6 +426,7 @@ export default class FoldingCell extends Component {
 
     const baseStyle = this.state.baseLayout ? {
       height: this.state.baseLayout.height,
+      flex: 1,
     } : styles.base;
 
     return (
